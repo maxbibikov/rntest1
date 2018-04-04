@@ -1,19 +1,19 @@
 // Core
 import React, { Component } from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
+import CachedImage from '../CachedImage';
 
 export default class AvatarHeader extends Component {
   render() {
     return (
       <View style={styles.avatarHeader}>
-        <Image
+        <CachedImage
           style={styles.avatar}
-          source={{
-            uri:
-              'https://cdn.pixabay.com/photo/2018/03/11/17/22/cat-3217406_1280.jpg'
-          }}
+          uri={
+            'https://images.pexels.com/photos/586040/pexels-photo-586040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+          }
         />
-        <Text style={styles.name}>React Native</Text>
+        <Text style={styles.name}>Elon Musk</Text>
       </View>
     );
   }
@@ -28,11 +28,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#D9FAFF'
   },
   avatar: {
-    width: 200,
-    height: 200,
+    width: 150,
+    height: 150,
     borderRadius: 100,
     borderColor: '#fff',
-    borderWidth: 10
+    borderWidth: 5
   },
   name: {
     color: '#005792',
